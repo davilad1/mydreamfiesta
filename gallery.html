@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GALLERY | MDF</title>
+        <link rel="stylesheet" href="mdf.css">
+    </head>
+    <body>
+        <div class="menu">
+            <a href="../MDF/home.html" class="menu-button">HOME</a>
+            <a href="../mdf/about.html" class="menu-button">ABOUT</a>
+            <a href="../MDF/services.html" class="menu-button">SERVICES</a>
+            <a href="../MDF/portfolio.html" class="menu-button">PORTFOLIO</a>
+            <a href="../MDF/gallery.html" class="menu-button">GALLERY</a>
+            <a href="../MDF/contact.html" class="menu-button">CONTACT</a>
+        </div>
+        <h1 class="mydreamfiesta">GALLERY</h1>
+
+        <div id="flexbox2">
+            <img class="flex-img" src="../MDF/img/dance.jpg">
+            <img class="flex-img" src="../MDF/img/gallo.jpg">
+            <img class="flex-img" src="../MDF/img/plan.jpg">
+            <img class="flex-img" src="../MDF/img/wtp.jpg">
+            <img class="flex-img" src="../MDF/img/philo.jpg">
+            <img class="flex-img" src="../MDF/img/boda.jpg">
+
+
+        </div>
+
+        <div class="carousel-wrapper">
+
+            <div class="video-carousel">
+                <video id="video1" class="video-slide" autoplay loop muted>
+                    <source src="../MDF/img/d49d1958242e4072abf435ca312553ef.mov" type="video/mp4">
+                </video>
+          
+                <video id="video2" class="video-slide hidden" autoplay loop muted>
+                    <source src="../MDF/img/IMG_0202.MOV" type="video/mp4">
+                </video>
+          
+                <button id="arrow" class="arrow-button">➡</button>
+            </div>
+            <br />
+            <h3>Scroll!</h3>
+        </div>
+
+          <br />
+          <hr />
+
+          <h3>Hablamos español! Your dream fiesta starts here! DECORATE, PLAN, RENT, and DANCE choreographies with us! Let’s make your dream fiesta come true in 2025- we’re ready when you are! </h3>
+        <a href="../MDF/contact.html" class="menu-button" style="text-align: center;">CONTACT US!</a>         
+
+          <script>
+            const video1 = document.getElementById('video1');
+            const video2 = document.getElementById('video2');
+            const arrow = document.getElementById('arrow');
+          
+            let currentVideo = 1;
+          
+            arrow.addEventListener('click', () => {
+              if (currentVideo === 1) {
+                video1.classList.add('hidden');
+                video2.classList.remove('hidden');
+                currentVideo = 2;
+              } else {
+                video2.classList.add('hidden');
+                video1.classList.remove('hidden');
+                currentVideo = 1;
+              }
+            });
+          </script>
+
+        <button onclick="scrollToTop()" id="top">Top</button>
+        <script>
+            function scrollToTop() {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          </script>
+    </body>
+</html>
